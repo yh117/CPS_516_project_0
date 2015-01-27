@@ -99,7 +99,7 @@
 ####  11   Riak        
 
 ##### pros:
- 1.  Riak is a highly distributed, replicated K/V store that offers extremely high availability, fault tolerance, operational simplicity and scalability. Riak is written in Erlang. [6], [29] 
+ 1.  Riak is a distributed, replicated, Key/Vvalue databse that offers extremely high availability, fault tolerance, operational simplicity and scalability. Riak is written in Erlang. [6], [29] 
  2.  Riak provides a RESTful API and other features including secondary indexes, Solr client query APIs and MapReduce (written in JavaScript and submitted by REST API), latency prediction. [29]    
 
 ##### cons:
@@ -108,7 +108,7 @@
 ####  12   Memcached       
 
 ##### pros:
- 1.  Memcached is a free and open-source distributed memory based K/V database. [6]   
+ 1.  Memcached is a free, open-source, distributed, memory based Key/Value database. [6]   
  2.  Memcached system is based on a client-server architecture. All the servers are in a flat structure, and the clients use a hashtable to determine which server to connect to based on the key of the data. The server will use another hashtable to find the corresponding data. [19]    
  3.  Memcached features low complexity and is simple to confiture, extremely stable. [16]    
 
@@ -135,10 +135,10 @@
 ####  15   Couchbase       
 
 ##### pros:
- 1.  Couchbase IS JSON-based, Memcached-compatible document-based data store.     
+ 1.  Couchbase is an open source, distributed (shared nothing architecture, every node has a cluster manager (for operations like replication and rebalancing) and a data manager(for data storing and querying) ), scalable, document based (JSON, schema less) databse optimized for interactive applications. Suport REST API. New data only append to the existing data to ensure data integrity. [6], [101]    
 
 ##### cons:
- 1.  Couchbase requires a rolling restart of the nodes after Schema changed.      
+ 1.  Couchbase requires a rolling restart of the nodes after schema changed. [6]     
 
 ####  16   CouchDB       
 
@@ -172,7 +172,7 @@
 
 ##### pros:
  1.  Neo4J is an open source, embedded, disk-based, fully transitional, graph database written in JAVA. Neo4J stores data in either and edge, a node or an attribute. The edge and node can have any number of attributes and can be labelled. The labels can be used for searchinig to reduce the search scope. [34]    
- 2.  Neo4J is a schema-free, extremely popular and powerful Java graph based data store. [6]   
+ 2.  Neo4J is schema-free, graph based data store written in Java. [6]   
 
 ##### cons:
  1.  Can not shard Neo4J therefore all database is in the same saver. Neo4J and other graph database is not recommended if foreign key is required. If the original database contains complicated SQL, then migration to graph database is difficult. [36]    
@@ -374,7 +374,7 @@
 ####  47   InterBase       
 
 ##### pros:
- 1.  InterBase is a corss platform relational database management system with small footprint (small disk and memory usage), little administration requirements and multi-generational architecture (MVCC). InterBase is SQL-92 compliant and supports JDBC, ODBC and  ADO.NET interfaces. InterBase also supports built-in encryption, rollback (which is based on multi-generational architecture and is near-instantaneous), [93]    
+ 1.  InterBase is a corss platform relational database management system with small footprint (small disk and memory usage), little administration requirements and multi-generational architecture (MVCC). InterBase is SQL-92 compliant and supports JDBC, ODBC and  ADO.NET interfaces. InterBase also supports built-in encryption, rollback (which is based on multi-generational architecture and is near-instantaneous). [93]    
 
 ##### cons:
  1.  Due to multi-generational architecture, some operations are difficult to implement and relative slow compared to tranditional relational database. [93]    
@@ -383,3 +383,131 @@
 
 ##### pros:
  1.  SQL Anywhere, a.k.a Sybase SQL Anywhere, is a cross platform (it can run on different platforms and database file can be copied across different platforms) relational database management system. Provides interface for ODBC, JDBC,  ADO.NET, PHP and Perl. Supports stored procedure, user defined functions, triggers, referential integrity, row-level locking, replication and system or scheduled events. Provides high availability, proxy tables. [94]    
+
+####  49   mSQL       
+
+##### pros:
+ 1.  mSQL is a lightweight database management system. [95]    
+
+##### cons:
+ 1.  It is surpassed by MySQL in popularity and becomes a less commonly used database. [95]    
+
+####  50   HyperSQL       
+
+##### pros:
+ 1.  HyperSQL is a lightweight, relational database management system written in Java. HyperSQL is a desktop database used for a single application. Supports a large portion of SQL-92 and SQL:2008 standards. Data is stored both in memory and in disk. User can get access to the database through a built-in web server, a GUI and commend line. HyperSQL can run in 3 modes to deal with concurrency control: table level locks, MVCC and a combination of locks and MVCC. [96], [98]    
+
+##### cons:
+ 1.  HyperSQL is not very fast, especially for large tables. [97]  
+
+####  51   ADABAS       
+
+##### pros:
+ 1.  ADABAS is an inversed list database, first released in 1971 for IBM mainframe system. ADABAS is acronym for Adaptable Data Base System. ADABAS stores data in files and regards file as its organizational unit. Can search on indexed or non indexed fields (attributes). ADABAS is faster and more compressed than DB2. [99], [100]    
+
+##### cons:
+ 1.  ADABAS doesn't have a SQL engine embeded. Can use ADABAS SQL gateway (provides OBDC, JDBC, OLE DB) to get access to the database. Doesn't support referential integrity. [99], [100]  
+
+####  Reference:
+
+[1] http://azure.microsoft.com/en-us/pricing/free-trial/   
+[2] http://azure.microsoft.com/en-us/campaigns/azure-vs-aws/  
+[3] http://azure.microsoft.com/en-us/services/sql-database/  
+[4] http://www.databasejournal.com/sqletc/article.php/3869736/Choosing-a-Database-Platform.htm  
+[5] https://en.wikipedia.org/wiki/Teradata  
+[6] https://www.digitalocean.com/community/tutorials/a-comparison-of-nosql-database-management-systems-and-models  
+[7] https://cwiki.apache.org/confluence/display/COUCHDB/Introduction  
+[8] http://couchdb.apache.org/  
+[9] http://www.tutorialspoint.com/mongodb/mongodb_advantages.htm  
+[10]  http://www.mongodb.org/  
+[11]  http://halls-of-valhalla.org/beta/articles/the-pros-and-cons-of-mongodb,45/  
+[12]  http://stackoverflow.com/questions/5244437/pros-and-cons-of-mongodb  
+[13]  http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis  
+[14]  http://www.ehow.com/info_12172600_list-pros-cons-oracle-database-11g.html  
+[15]  https://en.wikipedia.org/wiki/Sybase_IQ  
+[16]  http://searchsap.techtarget.com/definition/HANA-SAP-HANA  
+[17]  https://en.wikipedia.org/wiki/SAP_HANA  
+[18]  https://www.trustradius.com/reviews/sap-hana-2014-06-09-09-41-33  
+[19]  https://en.wikipedia.org/wiki/Memcached  
+[20]  https://en.wikipedia.org/wiki/Redis  
+[21]  http://www.bigdatalittlegeek.com/blog/2014/3/25/memcached-vs-redis  
+[22]  http://database.ittoolbox.com/groups/vendor-selection/dbms-select/oracle-11g-vs-sybase-iq-1882882  
+[23]  https://en.wikipedia.org/wiki/MySQL_Cluster  
+[24]  http://stackoverflow.com/questions/5300490/mysql-cluster-ndb-vs-mysql-replication-innodb-for-rails-3-apps-pros-cons  
+[25]  http://www.smartfile.com/blog/the-pros-and-cons-of-mysql/  
+[26]  https://en.wikipedia.org/wiki/MySQL  
+[27]  https://en.wikipedia.org/wiki/IBM_DB2  
+[28]  http://www.ehow.com/info_12106599_advantages-db2.html  
+[29]  https://en.wikipedia.org/wiki/Riak  
+[30]  https://blog.mozilla.org/data/2010/05/18/riak-and-cassandra-and-hbase-oh-my/  
+[31]  https://en.wikipedia.org/wiki/Apache_Cassandra  
+[32]  https://en.wikipedia.org/wiki/OrientDB  
+[33]  https://en.wikipedia.org/wiki/Draft:ArangoDB  
+[34]  https://en.wikipedia.org/wiki/Neo4j  
+[35]  https://news.ycombinator.com/item?id=7246849  
+[36]  https://groups.google.com/forum/#!topic/neo4j/mts6H9Py-2I  
+[37]  https://en.wikipedia.org/wiki/Elasticsearch  
+[38]  https://en.wikipedia.org/wiki/Apache_Accumulo  
+[39]  http://accumulo.apache.org/1.4/user_manual/Security.html  
+[40]  https://karussell.wordpress.com/2011/07/13/jetslide-uses-elasticsearch-as-database/  
+[41]  http://apache-accumulo.1065345.n5.nabble.com/How-does-Accumulo-compare-to-HBase-td10464.html  
+[42]  https://code.google.com/p/scalaris/  
+[43]  http://scalaris.googlecode.com/svn/trunk/user-dev-guide/main.pdf  
+[44]  https://en.wikipedia.org/wiki/VoltDB  
+[45]  http://voltdb.com/fast-smart-scale  
+[46]  http://highscalability.com/blog/2010/6/28/voltdb-decapitates-six-sql-urban-myths-and-delivers-internet.html  
+[47]  https://en.wikipedia.org/wiki/Aerospike_database  
+[48]  http://www.dbms2.com/2012/08/27/aerospike-the-former-citrusleaf/  
+[49]  https://en.wikipedia.org/wiki/Tokyo_Cabinet_and_Kyoto_Cabinet  
+[50]  http://fallabs.com/kyototycoon/  
+[51]  https://en.wikipedia.org/wiki/PostgreSQL  
+[52]  http://www.anchor.com.au/hosting/dedicated/mysql_vs_postgres#head-e1573b42fddb2f6189d92926583b54b2a4f3ef51  
+[53]  http://www.quora.com/What-are-pros-and-cons-of-PostgreSQL-and-MySQL  
+[54]  https://en.wikipedia.org/wiki/Microsoft_Access  
+[55]  http://www.learnitanytime.com/4031/know-the-advantages-and-disadvantages-of-microsoft-access-2/  
+[56]  https://en.wikipedia.org/wiki/SQLite  
+[57]  https://www.digitalocean.com/community/tutorials/how-and-when-to-use-sqlite  
+[58]  http://stackoverflow.com/questions/3630/sqlite-vs-mysql  
+[59]  https://en.wikipedia.org/wiki/Apache_Solr  
+[60]  http://www.ymc.ch/en/why-we-chose-solr-4-0-instead-of-elasticsearch  
+[61]  http://www.quora.com/What-are-the-pros-and-cons-of-Woosh-vs-Solr-vs-ElasticSearch  
+[62]  https://en.wikipedia.org/wiki/FileMaker  
+[63]  http://stackoverflow.com/questions/421960/what-are-the-pros-and-cons-of-filemaker  
+[64]  http://en.wikipedia.org/wiki/Apache_Hive  
+[65]  http://www.quora.com/What-are-the-pros-and-cons-between-Pig-and-Hive  
+[66]  http://en.wikipedia.org/wiki/IBM_Informix  
+[67]  http://en.wikipedia.org/wiki/Splunk  
+[68]  https://www.splunk.com/en_us/products/splunk-enterprise.html  
+[69]  http://www.itcentralstation.com/product_reviews/splunk-review-by-tal-weiss  
+[70]  http://en.wikipedia.org/wiki/Firebird_%28database_server%29  
+[71]  http://stackoverflow.com/questions/2964379/migrating-from-sql-server-to-firebird-pro-and-cons  
+[72]  http://en.wikipedia.org/wiki/MariaDB  
+[73]  https://mariadb.com/kb/en/mariadb/mariadb-vs-mysql-features/  
+[74]  http://news.dice.com/2013/05/22/mariadb-vs-mysql-a-comparison-2/  
+[75]  http://en.wikipedia.org/wiki/Vertica  
+[76]  https://en.wikipedia.org/wiki/Amazon_DynamoDB  
+[77]  http://www.slideshare.net/saniyakhalsa/dynamo-db-pros-and-cons  
+[78]  https://en.wikipedia.org/wiki/Dbase  
+[79]  http://www.linuxquestions.org/questions/programming-9/review-dbase-what-do-you-think-854312/  
+[80]  https://en.wikipedia.org/wiki/Sphinx_(search_engine)  
+[81]  http://stackoverflow.com/questions/737275/comparison-of-full-text-search-engine-lucene-sphinx-postgresql-mysql  
+[82]  https://en.wikipedia.org/wiki/Ingres_(database)  
+[83]  https://www.princeton.edu/~achaney/tmve/wiki100k/docs/Ingres_(database).html  
+[84]  https://en.wikipedia.org/wiki/MarkLogic  
+[85]  https://en.wikipedia.org/wiki/Ehcache  
+[86]  http://www.ehcache.org/about  
+[87]  http://www.codeproject.com/Articles/74322/RavenDB-An-Introduction  
+[88]  http://www.slideshare.net/goldshtn/introduction-to-ravendb  
+[89]  https://en.wikipedia.org/wiki/Hazelcast  
+[90]  http://hazelcast.com/products/hazelcast/  
+[91]  http://www.quora.com/How-does-Redis-compare-to-Hazelcast-What-are-the-pros-and-cons-of-using-either-of-them  
+[92]  http://mikepilone.blogspot.com/2013/01/hazelcast-jms-provider.html  
+[93]  https://en.wikipedia.org/wiki/InterBase  
+[94]  https://en.wikipedia.org/wiki/SQL_Anywhere  
+[95]  https://en.wikipedia.org/wiki/MSQL  
+[96]  https://en.wikipedia.org/wiki/HSQLDB  
+[97]  http://www.yellowfinbi.com/YFForum-Should-I-use-HSQL-or-another-DBMS-like-SQLserver-?thread=99961  
+[98]  https://forum.openoffice.org/en/forum/viewtopic.php?f=40&t=20736  
+[99]  https://en.wikipedia.org/wiki/ADABAS  
+[100] http://tech.forums.softwareag.com/techjforum/posts/list/21734.page  
+[101] https://en.wikipedia.org/wiki/Couchbase_Server
