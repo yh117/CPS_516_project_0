@@ -126,11 +126,6 @@
 ####  14   HBase       
 
 ##### pros:
- 1.  Data store for Apache Hadoop based on ideas from BigTable. [6]   
- 2.  Some popular usage cases for column based data stores are: keeping unstructured, non volatile information, scaling. [6]   
-
-##### cons:
- 1.  HBase is memory-hungry compared with Cassandra and Riak. HBase Requires disabling the table when changing Schema which means maintenance window. [30]    
 
 ####  15   Couchbase       
 
