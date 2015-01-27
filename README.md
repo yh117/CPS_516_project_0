@@ -126,6 +126,11 @@
 ####  14   HBase       
 
 ##### pros:
+ 1.  Data store for Apache Hadoop based on ideas from BigTable. [6]   
+ 2.  HBase is an open source, distributed database written in Java. Supports REST API. [102]
+
+##### cons:
+ 1.  HBase is memory-hungry compared with Cassandra and Riak. HBase Requires disabling the table when changing Schema which means maintenance window. [30]    
 
 ####  15   Couchbase       
 
@@ -505,4 +510,5 @@
 [98]  https://forum.openoffice.org/en/forum/viewtopic.php?f=40&t=20736  
 [99]  https://en.wikipedia.org/wiki/ADABAS  
 [100] http://tech.forums.softwareag.com/techjforum/posts/list/21734.page  
-[101] https://en.wikipedia.org/wiki/Couchbase_Server
+[101] https://en.wikipedia.org/wiki/Couchbase_Server  
+[102] https://en.wikipedia.org/wiki/Apache_HBase  
